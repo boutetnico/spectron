@@ -7,8 +7,6 @@
   "scripts": {
     "lint": "eslint \"**/*.js\" \"**/*.ts\" && prettier --check \"**/*.js\" \"**/*.ts\"",
     "prettier:write": "prettier --write \"**/*.js\" \"**/*.ts\"",
-    "prepare": "check-for-leaks",
-    "prepush": "check-for-leaks",
     "pretest": "tsc lib/spectron.d.ts",
     "test": "npm run lint && xvfb-maybe --server-args=\"-screen 0 1024x768x24\" -- mocha",
     "postinstall": "node lib/rpath-fix.js"
@@ -39,7 +37,6 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-roughly": "^1.0.0",
-    "check-for-leaks": "^1.2.1",
     "electron": "^13.0.1",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",
